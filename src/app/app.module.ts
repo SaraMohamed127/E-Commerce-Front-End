@@ -1,14 +1,15 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { NavComponent } from './components/home/nav/nav.component';
-import { FooterComponent } from './components/home/footer/footer.component';
-import { SidebarComponent } from './components/home/sidebar/sidebar.component';
-import { ContentComponent } from './components/home/content/content.component';
-import { MainComponent } from './components/home/main/main.component';
 import {HttpClientModule} from '@angular/common/http';
+import { ProductsComponent } from './components/products/products.component';
+import { NavComponent } from './components/site-layout/header/nav.component';
+import { FooterComponent } from './components/site-layout/footer/footer.component';
+import { SidebarComponent } from './components/sidebar/sidebar.component';
+import { ContentComponent } from './components/site-layout/content/content.component';
+import { MainComponent } from './components/main/main.component';
+import { ShopservicesService } from './components/services/shopservices.service';
 
 @NgModule({
   declarations: [
@@ -17,14 +18,15 @@ import {HttpClientModule} from '@angular/common/http';
     FooterComponent,
     SidebarComponent,
     ContentComponent,
-    MainComponent
+    MainComponent,
+    ProductsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
   ],
-  providers: [],
+  providers: [ShopservicesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -7,12 +7,13 @@ import {Observable} from 'rxjs';
   providedIn: 'root'
 })
 export class ShopservicesService {
- url = 'http://127.0.0.1:8000/shops';
+  api_url:string = 'http://127.0.0.1:8000/';
   // tslint:disable-next-line:variable-name
   constructor(private http: HttpClient) {}
   // tslint:disable-next-line:typedef
-  get_all_products(): Observable<Ishops[]>{
-    return this.http.get<Ishops[]>(this.url);
+  get_all_products(){
+   // return this.http.get<Ishops[]>(this.url);
+    return this.http.get(this.api_url + `products/all_products/`)
   }
 }
 

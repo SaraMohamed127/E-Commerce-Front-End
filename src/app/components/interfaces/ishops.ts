@@ -1,7 +1,9 @@
 export interface Ishops {
   id: number;
-  name: string;
-  address: string;
-  phone: number;
+  Title: string;
+  price: number;
+  description: string;
+  slug: string;
   img: string;
+  stock: number;
 }
